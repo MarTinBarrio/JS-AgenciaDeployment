@@ -1,0 +1,38 @@
+extends ./layout/index
+
+block contenido
+    main.container.mt-5
+        h1.text-center.mt-5= pagina
+
+        //p= JSON.stringify(testimoniales)
+        include ./layout/bloque_testimoniales
+
+        .row
+
+            .col-md-12
+                h2.d-block.w-100.text-center Agrega un testimonial
+
+                //p= JSON.stringify(errores)
+                if (errores)
+                    each error in errores
+                        .alert.col.alert-danger.text-center=error.mensaje
+
+            .row.justify-content-center.col
+                .col-md-8
+                    
+                    //la url donde hace el post,en esta caso es la misma.., pero con el método post
+                    form(action="/testimoniales" method="POST")
+                        .form-group
+                            label(for="nombre") Nombre
+                                                                                                                   //valor q paso como argumento
+                                                                                                                   //para cuando ya ingresé un campo en el formulario
+                            input#nombre(type="text", placeholder="Tu Nombre", name="nombre", class="form-control",value=nombre)
+                        .form-group
+                            label(for="correo") Correo Electrónico
+                            input#correo(type="text", placeholder="Tu Correo", name="correo", class="form-control", value=correo)
+                        .form-group
+                            label(for="mensage") Mensaje
+                            textarea#mensaje(class="form-control", name="mensaje", placeholder="Tu Mensaje", rows= 3)=mensaje
+                        
+                        input.btn.btn-success.btn-block(type="submit")
+            

@@ -1,0 +1,34 @@
+//- h1 Hola
+//- p Desde pug
+//- p= viajes
+//- p #{viajes}
+
+extends ./layout/index
+
+block contenido
+    main.container.mt-5
+        .row
+            .col-md-5 
+                img(src="img/nosotros.jpg", alt="imagen sobre nosotros", class="img-fluid")
+            .col-md-7
+                h1= pagina
+                blockquote Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed nec nisi lorem. Maecenas tellus sem, porta et odio ac, feugiat imperdiet metus. Curabitur blandit finibus sapien eget condimentum. Duis fermentum eu erat id venenatis. Duis efficitur eu ex vitae consequat. 
+
+                p Sed eu purus eu nunc ultrices dictum. Donec placerat quam nec magna dictum, a ullamcorper mi mollis. In efficitur pulvinar quam non varius. Ut non justo diam. Duis mattis tellus eget elit vehicula sollicitudin. Nunc vitae aliquet dolor. Duis eu augue nisl. Duis nibh turpis, condimentum non convallis vitae, scelerisque a nisi.
+
+                p Nullam ut leo ut nisi fermentum lobortis at non libero. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum tortor nulla, vestibulum sit amet semper id, mattis ut justo. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Nam sit amet commodo nisi. Vestibulum sit amet mi eros. Aliquam vulputate rhoncus risus, ac interdum ante consequat ullamcorper. Nam ullamcorper convallis tincidunt. Quisque sagittis gravida vehicula.
+    .listado-iconos
+        .container.mt-5.py-5.text-center
+            .row
+                .col-md-4
+                    img(src="img/icono_seguridad.svg", alt="icono seguridad" class="img-fluid md-4")
+                    h2.mb-4 Seguridad
+                    p per inceptos himenaeos. Nam sit amet commodo nisi. Vestibulum sit amet mi eros. Aliquam vulputate rhoncus risus, ac interdum ante consequat ullamcorper. Nam ullamcorper convallis tincidunt. Quisque sagittis gravida vehicula.
+                .col-md-4
+                    img(src="img/icono_destinos.svg", alt="icono destinos" class="img-fluid md-4")
+                    h2.mb-4 Los mas lindos destinos
+                    p per inceptos himenaeos. Nam sit amet commodo nisi. Vestibulum sit amet mi eros. Aliquam vulputate rhoncus risus, ac interdum ante consequat ullamcorper. Nam ullamcorper convallis tincidunt. Quisque sagittis gravida vehicula.
+                .col-md-4
+                    img(src="img/icono_precios.svg", alt="icono precios" class="img-fluid md-4")
+                    h2.mb-4 Los mejores precios
+                    p per inceptos himenaeos. Nam sit amet commodo nisi. Vestibulum sit amet mi eros. Aliquam vulputate rhoncus risus, ac interdum ante consequat ullamcorper. Nam ullamcorper convallis tincidunt. Quisque sagittis gravida vehicula.
